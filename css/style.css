@@ -168,3 +168,102 @@ body {
     color: #2563eb;
     font-weight: 600;
 }
+
+/* Project- Section */
+.project-container {
+    padding: 20px;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn-title {
+    font-size: 14px;
+    padding: 10px;
+    width: 90px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.card {
+    width: 350px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-left {
+    display: flex;
+}
+
+.btn-right {
+    padding: 10px;
+    border: none;
+    color: red;
+    background: rgba(255, 181, 181, 0.306);
+    border-radius: 5px;
+}
+
+.icon-card {
+    margin-left: 6px;
+    color: rgb(86, 86, 86);
+    font-size: 18px;
+}
+
+.line {
+    margin: 10px 0;
+    margin-bottom: 20px;
+    height: 1.5px;
+    background: #111827;
+}
+
+.card-center {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(86, 86, 86);
+}
+
+.card-bottom {
+    margin-top: 30px;
+}
+
+.crad-command-top {
+    color: red;
+    font-size: 14;
+}
+
+.crad-command-top span {
+    font-weight: 500;
+}
+
+.card-bottom-command {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.img-command {
+    width: 40px;
+}
+
+.right-command {
+    color: rgb(86, 86, 86);
+}
