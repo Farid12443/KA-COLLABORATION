@@ -1,5 +1,5 @@
-body{
-     font-family: "Roboto", sans-serif;
+.body {
+    font-family: "Roboto", sans-serif;
 }
 
 .content-all {
@@ -19,16 +19,17 @@ body{
     border: none;
     border-bottom: 1px solid #A69999;
 }
+
 .image {
     width: 500px;
-       display: flex;
-       object-fit: cover;
+    display: flex;
+    object-fit: cover;
 }
 
 .input-style {
     display: flex;
     flex-direction: column;
-   justify-content: center;
+    justify-content: center;
 }
 
 .checkbox-terms {
@@ -56,9 +57,9 @@ body{
 }
 
 .h1 {
- text-align: center;
+    text-align: center;
 }
 
-.bottem-crate-akun{
+.bottem-crate-akun {
     text-align: center;
 }
