@@ -119,6 +119,10 @@ body {
     border: 2px solid #e5e7eb;
 }
 
+.container {
+    display: flex;
+}
+
 /* sidebar */
 .sidebar-section {
     display: flex;
@@ -177,6 +181,7 @@ body {
 .project-title {
     display: flex;
     justify-content: space-between;
+    padding: 0 15px;
 }
 
 .title {
@@ -195,11 +200,18 @@ body {
     
 }
 
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card {
-    width: 350px;
+    width: 300px;
     background: #fff;
     border-radius: 15px;
     padding: 15px;
+    margin: 10px;
 }
 
 .card-top {
