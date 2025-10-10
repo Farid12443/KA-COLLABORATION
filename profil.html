@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Page</title>
+    <!-- load css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profil.css">
+
+    <!-- load fontawesome -->
+    <script src="https://kit.fontawesome.com/1df42cf205.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="images/Icon.png" alt="Logo" class="logo" />
+        </div>
+        <div class="nav-right">
+            <div class="search-section">
+                <form action="" class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for anything..." />
+                </form>
+            </div>
+            <i class="fa-regular fa-bell bell"></i>
+            <div class="profile">
+                <div class="profile-info">
+                    <p class="name">Anima Agrawal</p>
+                    <span class="location">U.P, India</span>
+                </div>
+                <img src="images/profil.png" alt="Profile" class="profile-img" />
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- sidebar -->
+        <aside class="sidebar-section">
+            <ul class="sidebar-menu">
+                <li><i class="fa-solid fa-folder"></i> Project</li>
+                <li><i class="fa-solid fa-clipboard-list"></i> Tasks</li>
+                <li><i class="fa-solid fa-clock"></i> Work Logs</li>
+                <li><i class="fa-solid fa-chart-line"></i> Performance</li>
+                <li><i class="fa-solid fa-gear"></i> Settings</li>
+            </ul>
+        </aside>
+
+        <section class="profil-section">
+            <!-- profil card -->
+            <div class="profil-card">
+                <div class="profil-info">
+                    <img src="images/Avatar.png" alt="Avatar">
+                    <h3>Yash Ghori</h3>
+                    <p>Ahmedabad, Gujarat<br>India</p>
+                </div>
+
+                <ul class="profil-detail">
+                    <li><i class="fa-solid fa-user"></i> UI - Intern</li>
+                    <li><i class="fa-solid fa-briefcase"></i> On-teak</li>
+                </ul>
+
+                <ul class="profil-contact">
+                    <li><i class="fa-solid fa-phone"></i> +91 7048144030</li>
+                    <li><i class="fa-solid fa-envelope"></i> yghori@asite.com</li>
+                    <li><i class="fa-solid fa-building"></i> PDT - I</li>
+                </ul>
+            </div>
+
+            <!-- edit profil -->
+            <div class="editprofil-section">
+                <h3>Edit Profile</h3>
+                <form class="edit-form">
+                    <div class="form-content">
+                        <div class="form-row-left">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="Yash">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="yghori@asite.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" placeholder="Change Password">
+                            </div>
+                            <div class="form-group full">
+                                <label>Designation</label>
+                                <select>
+                                    <option>UI Intern</option>
+                                    <option>Frontend Developer</option>
+                                    <option>Designer</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row-right  ">
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Ghori">
+                            </div>
+                            <div style="display: flex;">
+                                <div class="form-group">
+                                    <select>
+                                        <option>+62</option>
+                                        <option>+1</option>
+                                        <option>+43</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="text" placeholder="+91 7048144030">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Nationality</label>
+                                <select>
+                                    <option>India</option>
+                                    <option>Indonesia</option>
+                                    <option>USA</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="save-btn">Save</button>
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+</body>
+
+</html>
