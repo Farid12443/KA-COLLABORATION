@@ -29,7 +29,7 @@
             <i class="fa-regular fa-bell bell"></i>
             <div class="profile">
                 <div class="profile-info">
-                    <p class="name">Anima Agrawal</p>
+                    <p class="name" id="username">Anima Agrawal</p>
                     <span class="location">U.P, India</span>
                 </div>
                 <img src="images/profil.png" alt="Profile" class="profile-img" />
@@ -55,7 +55,7 @@
                 <div class="profil-card">
                     <div class="profil-info">
                         <img src="images/Avatar.png" alt="Avatar">
-                        <h3>Yash Ghori</h3>
+                        <h3 id="username">Yash Ghori</h3>
                         <p>Ahmedabad, Gujarat<br>India</p>
                     </div>
 
@@ -66,7 +66,7 @@
 
                     <ul class="profil-contact">
                         <li><i class="fa-solid fa-phone"></i> +91 7048144030</li>
-                        <li><i class="fa-solid fa-envelope"></i> yghori@asite.com</li>
+                        <li><i class="fa-solid fa-envelope"></i> <span id="email">yghori@asite.com</span></li>
                         <li><i class="fa-solid fa-building"></i> PDT - I</li>
                     </ul>
                 </div>
@@ -80,7 +80,7 @@
                     <div class="box">
                         <div class="container-circle">
                             <div class="circular-progress" data-percentage="97">
-                            <div class="progress-value">5w: 2d</div>
+                                <div class="progress-value">5w: 2d</div>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                 </form>
             </div>
 
-            
+
             <div class="right-section">
                 <!-- projek -->
                 <div class="editprofil-section">
@@ -175,16 +175,37 @@
                 </div>
             </div>
 
-            
 
 
-            
+
+
         </section>
 
     </div>
 
 
     <script>
+        //mengambil user
+        const currentUser = localStorage.getItem('currentUser');
+        const usernameSpan = document.getElementById('username');
+        const emailSpan = document.getElementById('email');
+
+        if (currentUser) {
+            const user = JSON.parse(currentUser);
+            const username = user.nama;
+            const email = user.email;
+
+            // Memasukkan nilai username ke dalam elemen h3
+            if (usernameSpan) {
+                usernameSpan.textContent = username;
+            }
+            // Memasukkan nilai email ke dalam elemen <span>
+            if (emailSpan) {
+                emailSpan.textContent = email; 
+            }
+        }
+
+
         // sample project data
         const project = [
             {
