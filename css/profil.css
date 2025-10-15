@@ -3,11 +3,12 @@
 }
 
 .profil-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     gap: 20px;
     align-items: flex-start;
-    padding: 20px;
+    padding: 20px 15px;
 }
 
 .profil-card {
@@ -15,12 +16,13 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding: 30px 20px;
+    padding: 20px 15px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    width: 280px;
+    width: 250px;
     gap: 25px;
     font-family: "Poppins", sans-serif;
+    box-shadow: 1px 3px 3px 1px #a5a5a5;
 }
 
 .profil-info {
@@ -40,6 +42,7 @@
     font-size: 18px;
     font-weight: 600;
     color: #4B4B4B;
+    margin: 10px auto;
 }
 
 .profil-info p {
@@ -65,9 +68,11 @@
 .profil-contact li {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     font-size: 14px;
     color: #4B4B4B;
+    margin: 5px auto;
 }
 
 .profil-detail i,
@@ -79,11 +84,12 @@
 /* edit profil */
 .editprofil-section {
     background-color: white;
-    padding: 30px;
+    padding: 15px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
+    width: 380px;
     font-family: "Poppins", sans-serif;
+    box-shadow: 1px 3px 3px 1px #a5a5a5;
 }
 
 .editprofil-section h3 {
@@ -97,10 +103,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 350px;
+
 }
 
 .form-content {
     display: flex;
+    justify-content: space-around;
     gap: 20px;
     padding: 0;
 }
@@ -113,6 +122,10 @@
     gap: 10px;
 }
 
+.form-row-right {
+    justify-content: start;
+}
+
 .form-group {
     flex: 1;
     display: flex;
@@ -120,7 +133,38 @@
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     padding: 5px;
+    margin: 18px 0;
     justify-content: center;
+    width: 165px;
+}
+
+.form-group-number {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 18px 0;
+    justify-content: center;
+    width: 100px;
+}
+
+.form-group-select {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 18px 0;
+    justify-content: center;
+    width: 10px;
+}
+
+.form-group-number label {
+    font-size: 12px;
+    color: #464a52;
 }
 
 .form-group:focus {
@@ -128,8 +172,9 @@
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
 
-.form-group.full {
+.form-group .full {
     flex: 100%;
+    margin: 0;
 }
 
 .form-group label {
@@ -138,6 +183,8 @@
 }
 
 .form-group input,
+.form-group-number input,
+.form-group-select select,
 .form-group select {
     /* padding: 10px 12px; */
     border: none;
@@ -154,12 +201,194 @@
     padding: 10px 0;
     font-size: 15px;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 30px auto;
     transition: 0.3s ease;
     width: 50%;
-    margin: auto;
 }
 
 .save-btn:hover {
     background-color: #2563eb;
 }
+
+/* project */
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title button {
+    background: #fff;
+    border: none;
+    color: #f472b6;
+    font-weight: 570   ;
+}
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.img-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    justify-content: center;
+}
+
+.img-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.img-card img {
+    width: 80px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Work */
+.work {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 1px 3px 3px 1px #a5a5a5;
+}
+
+.work-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-title button {
+    padding: 5px 10px;
+    color: #2c6f74;
+    background: #34848978;
+    border: none;
+    border-radius: 5px;
+}
+
+.box {
+  position: relative;
+  margin: 45px 10px;
+  flex: 1 1 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container circle {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 8px;
+  width: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress {
+  position: relative;
+  height: 135px;
+  width: 135px;
+  border-radius: 50%;
+  background: conic-gradient(#6b7280 236.6deg, #2563eb 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 2s ease-out;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.progress-value {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  color: #131313;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #d9d9d9;
+}
+
+/* profil-ui */
+.ui-profile {
+    background: #fff;
+    margin: 15px 0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 1px 3px 3px 1px #a5a5a5;
+}
+
+.ui-profile p {
+    color: gray;
+    font-size: 14px;
+}
+
+.title-ui {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.ui-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.ui-btn span {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px 0;
+    background: #d1d1d127;
+}
+
+.ui-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.ui-title button {
+    background: #fff;
+    border: none;
+    color: #f472b6;
+    font-weight: 570;
+}
+
+.ui-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    justify-content: center;
+}
+
+.ui-img-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 15px;
+}
+
+.ui-img-circle img {
+    width: 80px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+

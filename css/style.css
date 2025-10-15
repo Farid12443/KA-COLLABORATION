@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-bottom: 1px solid #e3e9ef;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -131,7 +131,7 @@ body {
     width: fit-content;
     min-height: 100vh;
     background-color: #ffffff;
-    padding: 30px 20px;
+    padding: 30px 10px;
     border-right: 1px solid #e5e7eb;
     font-family: 'Poppins', sans-serif;
 }
@@ -141,7 +141,7 @@ body {
     flex-direction: column;
     gap: 22px;
     width: 100%;
-    padding: 0 20px 0 0;
+    padding: 0 10px 0 0;
 }
 
 .sidebar-menu li {
