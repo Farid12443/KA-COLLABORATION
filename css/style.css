@@ -176,6 +176,9 @@ body {
 /* Project- Section */
 .project-container {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project-title {
@@ -186,7 +189,7 @@ body {
 
 .title {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .btn-title {
@@ -201,8 +204,8 @@ body {
 }
 
 .card-section {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
 }
 
