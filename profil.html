@@ -195,27 +195,27 @@
             {
                 id: 2,
                 image: "images/project-img.jpg",
-                name: "Seventeen"
+                name: "NCT Dream"
             },
             {
                 id: 3,
                 image: "images/project-img.jpg",
-                name: "Seventeen"
+                name: "NCT 127"
             },
             {
                 id: 4,
                 image: "images/project-img.jpg",
-                name: "Seventeen"
+                name: "NCT Wish"
             },
             {
                 id: 5,
                 image: "images/project-img.jpg",
-                name: "Seventeen"
+                name: "Ateez"
             },
             {
                 id: 6,
                 image: "images/project-img.jpg",
-                name: "Seventeen"
+                name: "EXO"
             },
         ];
 
@@ -226,8 +226,8 @@
                 .map(
                     (project) => `
                     <div class="img-card">
-                        <img src="images/project-img.jpg" alt="">
-                        <h5>Seventeen</h5>
+                        <img src="${project.image}" alt="">
+                        <h5>${project.name}</h5>
                     </div>
                     `
                 ).join("");
@@ -244,27 +244,27 @@
             {
                 id: 2,
                 image_profil: "images/ui-profile.jpeg",
-                name_profil: "Choi San",
+                name_profil: "Mingyu",
             },
             {
                 id: 3,
                 image_profil: "images/ui-profile.jpeg",
-                name_profil: "Choi San",
+                name_profil: "Scups",
             },
             {
                 id: 4,
                 image_profil: "images/ui-profile.jpeg",
-                name_profil: "Choi San",
+                name_profil: "Joshua",
             },
             {
                 id: 5,
                 image_profil: "images/ui-profile.jpeg",
-                name_profil: "Choi San",
+                name_profil: "Vernon",
             },
             {
                 id: 6,
-                image_profil: "images/ui-profile.jpeg",
-                name_profil: "Choi San",
+                image_profil: "images/pp.jpg",
+                name_profil: "Kakek Farid",
             },
         ];
 
@@ -275,8 +275,8 @@
                 .map(
                     (profile) => `
                     <div class="ui-img-circle">
-                        <img src="images/ui-profile.jpeg" alt="">
-                        <h5>Choi San</h5>
+                        <img src="${profile.image_profil}" alt="">
+                        <h5>${profile.name_profil}</h5>
                     </div>
                     `
                 ).join("");
