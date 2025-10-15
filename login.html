@@ -31,7 +31,6 @@
       </div>
     </div> -->
   </nav>
-  
   <div class="content-all">
     <div class="image">
       <img src="images/image-login.png" alt="" class="image">
@@ -39,7 +38,8 @@
     <div class="all-item-content">
       <h1 class="h1">Welcome back, yash</h1>
       <h3>welcome back pleace enter your details</h3>
-      <form action="" class="input-style">
+      <div class="erorMassage" id="erorMassage"></div>
+      <form action="" class="input-style" id="loginForm">
         <input placeholder="email@gmail.com" type="email" class="input" id="email">
         <input placeholder="add password" type="password" class="input" id="password">
         <div class="checkbox-terms">
@@ -54,6 +54,50 @@
       </form>
     </div>
   </div>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const erorMassage = document.getElementById('erorMassage');
+
+    loginForm.addEventListener('submit', (e) => {
+
+      e.preventDefault();
+
+      //mengambil user
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const namaLengkap = users.find(u => {
+        if (u.email === email) {
+          return u;
+        }
+      });
+
+      console.log({
+        'Email': email,
+        'password': password
+      })
+
+      if (!users.find(u => u.email === email)) {
+        erorMassage.textContent = 'Email belum terdaftar!';
+        erorMassage.classlist.remove('hidden');
+        return;
+      }
+
+      if (!users.find(u => u.password === password)) {
+        erorMassage.textContent = 'Password yang anda masukan salah!';
+        erorMassage.classlist.remove('hidden');
+        return;
+      }
+
+      //autologin
+      localStorage.setItem('currentUser', JSON.stringify({ "nama": namaLengkap.namaLengkap, email }));
+
+      window.location.href = 'index.html';
+    });
+  </script>
+
 </body>
 
 </html>
