@@ -123,6 +123,13 @@ body {
     display: flex;
 }
 
+.containers {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: start;
+}
+
 /* sidebar */
 .sidebar-section {
     display: flex;
@@ -175,7 +182,7 @@ body {
 
 /* Project- Section */
 .project-container {
-    padding: 20px;
+    padding: 23px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -210,10 +217,10 @@ body {
 }
 
 .card {
-    width: 300px;
+    width: 325px;
     background: #fff;
     border-radius: 15px;
-    padding: 15px;
+    padding: 15px 10px 10px 15px;
     margin: 10px;
 }
 
@@ -229,6 +236,7 @@ body {
 
 .btn-right {
     padding: 10px;
+    margin-right: 10px;
     border: none;
     color: red;
     background: rgba(255, 181, 181, 0.306);
@@ -256,7 +264,7 @@ body {
 }
 
 .card-bottom {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .crad-command-top {
@@ -272,13 +280,72 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
+}
+
+.images-command {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.images-command span {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffc2c2;
+    color: #ff0000;
 }
 
 .img-command {
-    width: 40px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-left: -15px;
 }
 
 .right-command {
     color: rgb(86, 86, 86);
+}
+
+/* button next */
+.button-next {
+    display: flex;
+    justify-content: center;
+}
+
+.button-text {
+    border: none;
+    padding: 5px 10px;
+    background: none;
+}
+
+.button-text:hover {
+    cursor: pointer;
+}
+
+.button-number {
+    padding: 8px 12px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #4b5563;
+}
+
+.button-number:hover {
+    cursor: pointer;
+    background: #1d4ed8;
+    color: #fff;
+    border: 1.5px solid #0f235d;
+}
+
+.button-number:focus {
+    background: #1d4ed8;
+    color: #fff;
+    border: 1.5px solid #0f235d;
+}
+
+.bottom-section {
+    height: 100px;
 }
