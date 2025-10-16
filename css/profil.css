@@ -5,7 +5,7 @@
 .profil-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     align-items: flex-start;
     padding: 20px 15px;
@@ -258,6 +258,7 @@
     padding: 15px;
     margin: 15px 0;
     box-shadow: 1px 3px 3px 1px #a5a5a5;
+    width: 250px;
 }
 
 .work-title {
@@ -392,3 +393,6 @@
     margin: 10px 0;
 }
 
+.left-section {
+    width: 250px;
+}
