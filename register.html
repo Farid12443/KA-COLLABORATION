@@ -41,10 +41,12 @@
     <div class="all-item-content">
       <h1 class="h1">Welcome back, yash</h1>
       <h3>welcome back pleace enter your details</h3>
-      <form action="" class="input-style">
+      <div class="erorMassage" id="erorMassage"></div>
+      <form action="" class="input-style" id="registerForm">
         <input placeholder="add your name" type="text" class="input" id="username">
         <input placeholder="email@gmail.com" type="email" class="input" id="email">
         <input placeholder="add password" type="password" class="input" id="password">
+        <input placeholder="Confirm Password" type="password" class="input" id="konfirmasiPassword">
         <div class="checkbox-terms">
           <div class="checkbox-terms2">
             <input type="checkbox">
@@ -52,10 +54,63 @@
           </div>
           <p>Forgot <a href="">password</a></p>
         </div>
-        <button class="button">Log in</button>
+        <button type="submit" class="button">Log in</button>
         <p class="bottem-crate-akun">dont,have account? <a href="">Sing up for free</a></p>
       </form>
     </div>
+
   </div>
+
+  <script>
+    const registerForm = document.getElementById('registerForm');
+    const erorMassage = document.getElementById('erorMassage');
+
+    registerForm.addEventListener('submit', (e) => {
+
+      e.preventDefault();
+
+      const namaLengkap = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('konfirmasiPassword').value;
+
+      console.log({
+        'nama': namaLengkap,
+        'Email': email,
+        'password': password,
+        'konfirmasi password': confirmPassword
+      })
+
+      if (password != confirmPassword) {
+        erorMassage.textContent = 'Password tidak cocok!';
+        erorMassage.classlist.remove('hidden');
+        return;
+      }
+
+      //mengambil user
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+      if (users.some(u => u.email === email)) {
+        erorMassage.textContent = 'Email sudah terdaftar!';
+        erorMassage.classlist.remove('hidden');
+        return;
+      }
+      // menambah data user baru
+      users.push({ namaLengkap, email, password });
+      localStorage.setItem('users', JSON.stringify(users));
+      const user = {
+        "nama": namaLengkap,
+        "email": email
+      }
+
+      //autologin
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      alert(namaLengkap)
+
+      window.location.href = 'index.html';
+    });
+  </script>
+
 </body>
+
 </html>
